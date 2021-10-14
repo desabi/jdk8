@@ -1,9 +1,5 @@
 package breturn;
 
-import avoid.MyFunctionalInterface;
-
-import java.util.function.BiFunction;
-
 public class MethodReference {
     public static void main(String[] args) {
         String nameArg = "desabi";

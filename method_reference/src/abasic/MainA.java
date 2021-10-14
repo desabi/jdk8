@@ -20,8 +20,10 @@ public class MainA {
         // lambda expression
         Greet greet1 = nameParam -> nameParam.toUpperCase();
         System.out.println("The name " + nameArg + " toUpperCase is: " + greet1.getMessage(nameArg));
-        
+
         // method reference
+        // String::toUpperCase retorna un String
+        // el metodo greetMessage de interface funcional Greet retorna un String
         Greet greet2 = String::toUpperCase;
         System.out.println("The name " + nameArg + " toUpperCase is: " + greet2.getMessage(nameArg));
     }
