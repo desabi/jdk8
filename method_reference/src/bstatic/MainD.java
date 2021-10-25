@@ -3,7 +3,7 @@ package bstatic;
 import java.util.function.Function;
 
 
-public class MainB {
+public class MainD {
     public static void main(String[] args) {
         Integer intArg = 34;
 
@@ -17,5 +17,9 @@ public class MainB {
 
         System.out.println(intArg + " in binary is: " + functionA.apply(intArg));
         System.out.println(intArg + " in binary is: " + functionB.apply(intArg));
+
+        // El método que va después de los dos puntos (::toBinaryString)
+        // debe poder procesar los parámetros de entrada
+        // que se van a pasar al llamar al método (apply).
     }
 }
