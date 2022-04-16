@@ -8,8 +8,8 @@ public class OfNullablePerson {
         Person emptyPerson = new Person();
         Person nullPerson = null;
 
-        System.out.println("OfNullable empty person: " + Optional.ofNullable(emptyPerson));
-        System.out.println("OfNullable null person: " + Optional.ofNullable(nullPerson));
+        System.out.println("ofNullable(emptyPerson): " + Optional.ofNullable(emptyPerson));
+        System.out.println("OfNullable(nullPerson): " + Optional.ofNullable(nullPerson));
 
         Optional<Person> optionalEmptyPerson = Optional.ofNullable(emptyPerson);
         Optional<Person> optionalNullPerson = Optional.ofNullable(nullPerson);

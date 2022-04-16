@@ -11,7 +11,7 @@ public class NameOf {
         System.out.println("optionalName = " + optionalName.get());
 
         String nullName = null;
-        Optional<Object> optionalNameB = Optional.of(nullName); //NullPonterException
+        Optional<Object> optionalNameB = Optional.of(nullName); //NullPointerException, utilizar ofNullable
         System.out.println("optionalNameB = " + optionalNameB.get());
     }
 }

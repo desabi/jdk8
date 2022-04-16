@@ -7,6 +7,6 @@ public class NameException {
         String nullName = null;
 
         // java 10
-        String name = Optional.ofNullable(nullName).orElseThrow();
+        String name = Optional.ofNullable(nullName).orElseThrow(); // NoSuchElementException
     }
 }

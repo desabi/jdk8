@@ -7,6 +7,6 @@ public class Name {
         String name = null;
 
         String notNullName = Optional.ofNullable(name).orElse("john");
-        System.out.println("Not null name: " + notNullName);
+        System.out.println("Not null name: " + notNullName); // john
     }
 }

@@ -12,6 +12,7 @@ public class OfNullableString {
         // we can use the ofNullable() method:
         String name = "desabi";
         Optional<String> optionalName = Optional.ofNullable(name);
+
         // true
         System.out.println(optionalName.isPresent());
 

@@ -15,6 +15,6 @@ public class OfString {
         Optional<String> optionalColor = Optional.of(color);
         System.out.println(optionalColor.isPresent());
 
-        // But in case we expect some null values, we can use the ofNullable() method:
+        // But in case we expect some null values, we can use the ofNullable() method
     }
 }

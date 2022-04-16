@@ -11,11 +11,11 @@ public class OfNullableBasic {
         // But in case we expect some null values,
         // we can use the ofNullable() method:
 
-        System.out.println("of nullable null: " + Optional.ofNullable(null));
+        System.out.println("ofNullable(null): " + Optional.ofNullable(null));
 
         Optional<Object> optionalNull = Optional.ofNullable(null);
         System.out.println("optional null: " + optionalNull);
-        System.out.println("optinal null is present: " + optionalNull.isPresent());
+        System.out.println("optional null is present: " + optionalNull.isPresent());
         System.out.println("optional null is empty: " + optionalNull.isEmpty());
 
     }
