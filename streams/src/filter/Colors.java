@@ -6,6 +6,7 @@ import java.util.stream.Stream;
 public class Colors {
     public static void main(String[] args) {
 
+        System.out.println("=== filter ===");
         Stream.of("RED", "GREEN", "BLUE", "RED")
                 .filter(color -> color.equals("RED"))
                 .forEach(System.out::println);
