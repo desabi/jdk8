@@ -15,9 +15,8 @@ bin/
 .sts4-cache
 
 ### IntelliJ IDEA ###
-.idea
 out/
-/out
+.idea
 *.iws
 *.iml
 *.ipr

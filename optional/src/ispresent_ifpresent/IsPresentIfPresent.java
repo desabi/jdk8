@@ -5,6 +5,6 @@ public class IsPresentIfPresent {
         String fruit = "mango";
         String color = null;
 
-        
+
     }
 }
