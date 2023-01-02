@@ -10,7 +10,9 @@ public class ForEachEmployee {
         Stream<Employee> employeeStream = EmployeesStream.get();
 
         // the method forEach is a terminal operation
-       employeeStream.forEach(employee -> employee.salaryIncrement(10.0));
+       employeeStream
+               .forEach(employee -> employee.salaryIncrement(10.0));
 
+        System.out.println(employeeStream);
     }
 }

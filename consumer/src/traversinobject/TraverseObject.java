@@ -30,17 +30,19 @@ public class TraverseObject {
         // forEachRemaining: Traversing Objects Using Iterators
         // in the next examples, the method accept is not used
         // that is because the method for each remaining does that
-        System.out.println("FOREACHREMAINING");
+        System.out.println("FOR-EACH-REMAINING");
         Consumer<Car> carConsumer = car -> System.out.println(car);
         cars.iterator().forEachRemaining(carConsumer);
 
+        // in the next example, the method accept is not used
+        // that is because the method for each remaining does that
         cars.iterator().forEachRemaining(car -> System.out.println(car));
 
         // forEachRemaining: method reference
         cars.iterator().forEachRemaining(System.out::println);
 
         // foreach:  Traversing Iterable Objects
-        System.out.println("FOREACH");
+        System.out.println("FOR-EACH");
         cars.forEach(carConsumer);
         cars.forEach(car -> System.out.println(car));
         cars.forEach(System.out::println);
