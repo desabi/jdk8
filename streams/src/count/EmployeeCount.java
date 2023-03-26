@@ -2,17 +2,25 @@ package count;
 
 import util.Employee;
 import util.EmployeesList;
+import util.EmployeesStream;
 
 import java.util.List;
+import java.util.stream.Stream;
 
 public class EmployeeCount {
     public static void main(String[] args) {
-        List<Employee> employees = EmployeesList.get();
+        List<Employee> employeesList = EmployeesList.get();
+        Stream<Employee> employeeStream = EmployeesStream.get();
 
-        long count = employees.stream()
-                .filter(employee -> employee.getSalary() > 200000)
+        long countList = employeesList.stream()
+                .filter(employee -> employee.getSalary() > 200_000)
                 .count();
 
-        System.out.println("count = " + count);
+        long countStream = employeeStream
+                .filter(e -> e.getSalary() > 200_000)
+                .count();
+
+        System.out.println("countList = " + countList);
+        System.out.println("countStream = " + countStream);
     }
 }
