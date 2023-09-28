@@ -38,6 +38,7 @@ public class Employee {
     public void salaryIncrement(Double percentage) {
         Double newSalary = salary + percentage * salary / 100;
         setSalary(newSalary);
+        this.toString();
     }
 
     @Override
