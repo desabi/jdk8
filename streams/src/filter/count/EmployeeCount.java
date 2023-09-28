@@ -1,4 +1,4 @@
-package count;
+package filter.count;
 
 import util.Employee;
 import util.EmployeesList;

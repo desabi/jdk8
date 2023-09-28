@@ -15,7 +15,9 @@ public class StreamToList {
         // java 16
         List<String> isoCountriesListB = Stream.of(Locale.getISOCountries()).toList();
 
-        isoCountriesListB.forEach(System.out::println);
+        isoCountriesListA.forEach(System.out::print);
+        System.out.println();
+        isoCountriesListB.forEach(System.out::print);
 
     }
 }

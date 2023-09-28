@@ -13,6 +13,7 @@ public class ForEachEmployee {
        employeeStream
                .forEach(employee -> employee.salaryIncrement(10.0));
 
+       // para imprimir los valores, revisar el paquete peek
         System.out.println(employeeStream);
     }
 }
