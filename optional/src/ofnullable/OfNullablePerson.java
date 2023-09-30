@@ -5,11 +5,11 @@ import java.util.Optional;
 public class OfNullablePerson {
     public static void main(String[] args) {
 
-        Person emptyPerson = new Person();
+        Person emptyPerson = new Person(); // name and age have null values
         Person nullPerson = null;
 
         System.out.println("ofNullable(emptyPerson): " + Optional.ofNullable(emptyPerson));
-        System.out.println("OfNullable(nullPerson): " + Optional.ofNullable(nullPerson));
+        System.out.println("ofNullable(nullPerson): " + Optional.ofNullable(nullPerson));
 
         Optional<Person> optionalEmptyPerson = Optional.ofNullable(emptyPerson);
         Optional<Person> optionalNullPerson = Optional.ofNullable(nullPerson);

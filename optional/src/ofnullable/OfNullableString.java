@@ -12,15 +12,15 @@ public class OfNullableString {
         // we can use the ofNullable() method:
         String name = "desabi";
         Optional<String> optionalName = Optional.ofNullable(name);
-
-        // true
-        System.out.println(optionalName.isPresent());
+        System.out.println("optionalName = " + optionalName);
+        System.out.println("optionalName.isPresent() = " + optionalName.isPresent()); // true
 
         String color = null;
         System.out.println(Optional.ofNullable(color)); // Optional.empty
 
         Optional<String> optionalColor = Optional.ofNullable(color);
-        System.out.println(optionalColor.isPresent()); // false
+        System.out.println("optionalColor = " + optionalColor);
+        System.out.println("optionalColor.isPresent() = " + optionalColor.isPresent());; // false
 
 
     }
