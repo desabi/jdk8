@@ -16,7 +16,7 @@ public class FunctionUse {
         Function<String, Integer> namesLength = String::length;
 
         List<Integer> collect = names.stream()
-                .map(namesLength)
+                .map(namesLength) // como aplica el metodo apply automaticamente?
                 .collect(Collectors.toList());
 
         log.info("Collect: {} ", collect);

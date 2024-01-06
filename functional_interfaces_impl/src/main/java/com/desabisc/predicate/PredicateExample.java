@@ -12,18 +12,20 @@ import java.util.stream.Collectors;
 public class PredicateExample {
     public static void main(String[] args) {
 
+        int positiveArg = 10;
+        int negativeArg = -5;
+
         // Predicate is a functional interface whose functional method, called test,
         // evaluates a condition on an input variable of a generic type.
         // The test method returns true if the condition is true, and false otherwise.
 
-                // declare a Predicate
-        Predicate<Integer> isPositive = number -> number > 0;
-        int aPositive = 10;
-        int aNegative = -5;
+        // declare a Predicate
+        Predicate<Integer> isPositive = numberParam -> numberParam > 0;
+
 
         // use the test method from a Predicate
-        log.info("Is Positive: {}", isPositive.test(aPositive));
-        log.info("Is Positive: {}", isPositive.test(aNegative));
+        log.info("Is Positive: {}", isPositive.test(positiveArg));
+        log.info("Is Positive: {}", isPositive.test(negativeArg));
 
         // como usar un Predicate sin llamar al metodo test?
 
