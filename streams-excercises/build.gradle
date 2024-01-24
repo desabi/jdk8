@@ -11,9 +11,7 @@ repositories {
 
 dependencies {
     implementation 'org.slf4j:slf4j-api:2.0.11'
-    // https://mvnrepository.com/artifact/org.slf4j/slf4j-simple
     implementation 'org.slf4j:slf4j-simple:2.0.11'
-
 
     compileOnly 'org.projectlombok:lombok:1.18.30'
     annotationProcessor 'org.projectlombok:lombok:1.18.30'
