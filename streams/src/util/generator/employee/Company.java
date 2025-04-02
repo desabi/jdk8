@@ -1,15 +1,27 @@
 package util.generator.employee;
 
+import java.text.ParseException;
 import java.util.List;
 import java.util.ArrayList;
 import java.text.SimpleDateFormat;
-import java.util.Date;
 
 public class Company {
     public static void main(String[] args) throws Exception {
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        List<Department> departments = new ArrayList<>();
+        List<Department> departments = getDepartments();
 
+        // Print the JSON structure
+        System.out.println("{");
+        System.out.println("  \"departments\": [");
+        for (int i = 0; i < departments.size(); i++) {
+            System.out.println("    " + departments.get(i).toString() + (i < departments.size() - 1 ? "," : ""));
+        }
+        System.out.println("  ]");
+        System.out.println("}");
+    }
+
+    static List<Department> getDepartments() throws ParseException {
+        List<Department> departments = new ArrayList<>();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         // --- Executive Department ---
         Department executiveDept = new Department();
         executiveDept.addEmployee(new Employee("John", "CEO", "Executive", "Full-time", sdf.parse("2010-05-15"), 250000.0, 13, false));
@@ -52,13 +64,6 @@ public class Company {
         creativeDept.addEmployee(new Employee("Zoe", "Illustrator", "Creative", "Contract", sdf.parse("2021-07-15"), 95000.0, 2, true));
         departments.add(creativeDept);
 
-        // Print the JSON structure
-        System.out.println("{");
-        System.out.println("  \"departments\": [");
-        for (int i = 0; i < departments.size(); i++) {
-            System.out.println("    " + departments.get(i).toString() + (i < departments.size() - 1 ? "," : ""));
-        }
-        System.out.println("  ]");
-        System.out.println("}");
+        return departments;
     }
 }
