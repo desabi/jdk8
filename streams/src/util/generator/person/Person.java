@@ -1,4 +1,4 @@
-package util.person.generator;
+package util.generator.person;
 
 import java.time.LocalDate;
 import java.util.List;

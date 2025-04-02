@@ -1,4 +1,4 @@
-package util.person.generator;
+package util.generator.person;
 
 import java.util.List;
 
