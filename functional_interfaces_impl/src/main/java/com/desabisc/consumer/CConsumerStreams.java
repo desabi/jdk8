@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.function.Consumer;
 
-public class ConsumerStreams {
+public class CConsumerStreams {
     public static void main(String[] args) {
         List<String> strings = Arrays.asList("banana", "apple", "orange", "grape");
 
