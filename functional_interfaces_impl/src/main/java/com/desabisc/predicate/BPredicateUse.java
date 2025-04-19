@@ -8,10 +8,10 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 @Slf4j
-public class PredicateUse {
+public class BPredicateUse {
     public static void main(String[] args) {
 
-        List<String> names = Arrays.asList("John", "Smith", "Samueal", "Catley", "Sie");
+        List<String> names = Arrays.asList("John", "Smith", "Samuel", "Katey", "Sie");
         Predicate<String> startsWithS = name -> name.startsWith("S");
 
         List<String> collect = names.stream()
