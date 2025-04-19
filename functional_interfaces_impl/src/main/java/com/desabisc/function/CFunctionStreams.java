@@ -4,7 +4,7 @@ import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-public class FunctionStreams {
+public class CFunctionStreams {
     /**
      * The Stream API in Java often utilizes the Function functional interface in various methods to perform transformations,
      * mappings, and other operations on stream elements.
@@ -15,8 +15,22 @@ public class FunctionStreams {
         * map: This method applies a function to each element in the stream and returns a new stream of the results.
         * */
         // Example
+        // Create a list of numbers
         List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
-        List<Integer> squaredNumbers = numbers.stream().map(n -> n * n).toList();
+        // Create a function
+        Function<Integer, Integer> myFunction = n -> n * n;
+        // Get the squares from the numbers list
+        List<Integer> squaredNumbers = numbers.stream()
+            .map(myFunction) // How does the apply() method run automatically?
+            // You don’t call apply() explicitly because the Stream API handles it internally.
+            // The actual invocation happens in the stream’s pipeline processing logic (inside ReferencePipeline or Sink).
+            // The map() operation itself does not process elements immediately (due to lazy evaluation in streams).
+            // Instead, it wraps the Function (mapper) into a stream pipeline stage,
+            // which is executed when a terminal operation (like toList(), collect(), or forEach()) is called.
+            // The actual apply() call happens in internal stream helper classes, such as:
+            // ReferencePipeline (part of java.util.stream package)
+            // StatelessOp (for intermediate operations like map())
+            .toList();
         System.out.println("squaredNumbers = " + squaredNumbers);
 
         /*
@@ -25,7 +39,7 @@ public class FunctionStreams {
         * */
         // Example
         List<List<Integer>> nestedList = Arrays.asList(Arrays.asList(1, 2), Arrays.asList(3, 4));
-        List<Integer> flattenedList = nestedList.stream().flatMap(Collection::stream).collect(Collectors.toList());
+        List<Integer> flattenedList = nestedList.stream().flatMap(Collection::stream).toList();
         System.out.println("flattenedList = " + flattenedList);
 
         /*
@@ -40,7 +54,7 @@ public class FunctionStreams {
 
         /*
         * sorted: The sorted method also uses a Comparator functional interface, which can be constructed using Function
-        *  when comparing elements based on a function's result.
+        * when comparing elements based on a function's result.
         * */
         // Example - sorting by string length
         List<String> strings1 = Arrays.asList("apple", "banana", "orange");

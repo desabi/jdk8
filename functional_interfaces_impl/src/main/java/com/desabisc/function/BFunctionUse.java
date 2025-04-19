@@ -7,16 +7,21 @@ import java.util.List;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
+/**
+ * Function is a functional interface with two type parameters T and R.
+ * Its functional method apply(), takes an argument of type T and returns an object of type R.
+ * Functions are ideal for converting an object of type T to one of type R.
+ */
 @Slf4j
-public class FunctionUse {
+public class BFunctionUse {
     public static void main(String[] args) {
-        List<String> names = Arrays.asList("John", "Smith", "Samueal", "Catley", "Sie");
+        List<String> names = Arrays.asList("John", "Smith", "Samuel", "Katey", "Sie");
 
         //Function<String, Integer> namesLength = name -> name.length();
         Function<String, Integer> namesLength = String::length;
 
         List<Integer> collect = names.stream()
-                .map(namesLength) // como aplica el metodo apply automaticamente?
+                .map(namesLength) // How does the apply() method run automatically?
                 .collect(Collectors.toList());
 
         log.info("Collect: {} ", collect);
